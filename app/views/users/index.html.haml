@@ -1,0 +1,20 @@
+.container
+  .row
+    .col-md-5
+      %div{ "ng-app": "myapplication"}
+
+        %table{border: 2}
+          %tr
+            %th Name
+            %th Action
+          - @user.each do |f|
+            %tr
+              %td= f.name
+              %td= link_to "Delete", user_path(f), method: :delete
+              %br
+      %div{ "ng-controller": "IndexCtrl"}
+        %h1 {{ title }}
+
+%br
+  = link_to "Create New User", new_user_path
+
