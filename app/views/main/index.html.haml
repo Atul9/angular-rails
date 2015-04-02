@@ -4,3 +4,15 @@
     Name:
     %input{"ng-model" => "name", :type => "text"}/
   %p {{name}}
+
+
+  %div{"data-ng-app" => "", "data-ng-init" => "quantity=1;price=5"}
+    %h2 Cost Calculator
+    Quantity:
+    %input{"ng-model" => "quantity", :type => "number"}/
+    Price:
+    %input{"ng-model" => "price", :type => "number"}/
+    %p
+      %b Total in dollar:
+      {{quantity * price}}
+
