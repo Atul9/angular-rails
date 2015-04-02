@@ -1,11 +1,10 @@
 !!!
-%html{"ng-app": "myapplication"}
+%html{"ng-app" => ""}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Angularjs
     = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application', UsersController
+    = javascript_include_tag 'application', src: 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'
     = csrf_meta_tags
   %body
-    .container{"ng-view" => ""}
-      = yield
+    = yield
